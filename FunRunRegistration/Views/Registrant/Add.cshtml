@@ -1,0 +1,71 @@
+﻿@model FunRunRegistration.Models.ViewModels.AddRegistrantViewModel
+
+@{
+    ViewData["Title"] = "Add Registrant";
+}
+
+<h1 class="text-dark text-center">2025 FunRun - Registration Form</h1>
+
+<form method="post">
+    <div class="container w-100 mt-10">
+        <!-- Registrant Information Section -->
+        <div class="mt-3 p-2 border rounded bg-light">
+            <h3 class="text-dark">Profile</h3>
+            <div class="row mt-2">
+                <div class="col-md-6">
+                    <label class="form-label">First Name</label>
+                    <input type="text" class="form-control" asp-for="UserFirstName" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" class="form-control" asp-for="UserLastName" />
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-6">
+                    <label class="form-label">Telephone</label>
+                    <input type="text" class="form-control" asp-for="UserTelephone" />
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Birthday</label>
+                    <input type="date" class="form-control" asp-for="UserBirthday" />
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Gender</label>
+                    <select class="form-control" asp-for="UserGender">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Address Section -->
+        <div class="mt-3 p-2 border rounded bg-light">
+            <h3 class="text-dark">Address</h3>
+            <div class="row mt-2">
+                <div class="col-md-12">
+                    <label class="form-label">Street</label>
+                    <input type="text" class="form-control" asp-for="AddressStreet" />
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-6">
+                    <label class="form-label">City</label>
+                    <input type="text" class="form-control" asp-for="AddressCity" />
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Postal Code</label>
+                    <input type="text" class="form-control" asp-for="AddressPostal" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="mt-3 text-center">
+            <button type="submit" class="btn btn-dark w-50">Register</button>
+        </div>
+    </div>
+</form>
