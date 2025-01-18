@@ -12,7 +12,5 @@ namespace FunRunRegistration.Models.Entities
         public string? UserTelephone { get; set; }
         public DateTime UserBirthday { get; set; }
         public string? UserGender { get; set; }
-
-        public Address? Address { get; set; }
     }
 }
